@@ -153,3 +153,112 @@ bmi should equal 20 when it's rounded to the nearest whole number.
 
 /**************************************************/
 
+prompt("What is your name?: ")
+prompt("What is their name?: ")
+
+var lowerScore = Math.random() * 100;
+lowerScore = Math.floor(lowerScore) + 1;
+
+alert("Your love score is " + loveScore);
+
+/**************************************************/
+
+prompt("What is your name?: ")
+prompt("What is their name?: ")
+
+var lowerScore = Math.random() * 100;
+lowerScore = Math.floor(lowerScore) + 1;
+
+if (lowerScore > 70) {
+
+    alert("Your love score is " + loveScore + "%" + "Your love each other like kanye loves kaye");
+
+} else {
+    alert("Your love score is " + loveScore + "%");
+}
+
+/**************************************************/
+
+prompt("What is your name?: ")
+prompt("What is their name?: ")
+
+var lowerScore = Math.random() * 100;
+lowerScore = Math.floor(lowerScore) + 1;
+
+if (lowerScore > 70) {
+
+    alert("Your love score is " + loveScore + "%" + "Your love each other like kanye loves kaye");
+}
+if (lowerScore > 30 && lowerScore <=70) {
+
+    alert("Your love score is " + loveScore + "%");
+} 
+
+if (lowerScore <= 30) {
+
+    alert("Your love score is " + loveScore + "%" + "You go together like oil and Water");
+
+}
+
+/**************************************************/
+
+function bmiCalculator (weight, height) {
+
+    var bmi = weight / (height * height);
+
+    if (bmi < 18.5) {
+        alert("So you are underweight " + bmi );
+    }
+
+    if (bmi > 18.5 && bmi <= 24.9) {
+        alert("So you have a normal weight " + bmi );
+    }
+
+    if (bmi > 24.9) {
+        alert("So you are overweight " + bmi );
+    }
+
+    return interpretation;
+}
+
+/**************************************************/
+
+function isLeap(year) {
+    
+    /**************Don't change the code above****************/    
+        
+        //Write your code here.    
+    
+        if (year % 4 === 0) {
+            if (year % 100 == 0) {
+                if (year % 400 === 0) {
+                    return "Leap Year"
+                }
+            } else {
+                return "Not leap Year"
+            }
+        } else {
+            return "Leap Year";
+        } else {
+            return "Not leap Year";
+        }
+    
+    /**************Don't change the code below****************/    
+    
+    }
+
+    /**************************************************/
+
+    var guestList = ["Angela", "Jack", "Pan", "Ana", "Laura", "Jason"];
+
+    var guestName = ("What is your Name?: ")
+
+    if (guestList.includes(guestName)) {
+        alert("Welcome!");
+    } else {
+        alert("Sorry, Maybe Next Time.!!");
+    }
+
+    /**************************************************/
+
+    
