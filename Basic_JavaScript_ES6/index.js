@@ -232,19 +232,18 @@ function isLeap(year) {
         if (year % 4 === 0) {
             if (year % 100 == 0) {
                 if (year % 400 === 0) {
-                    return "Leap Year"
+                    return "Leap Year";
+                    } else {
+                return "Not leap Year";
+                    }
+                } else {
+            return "Leap Year";
                 }
             } else {
-                return "Not leap Year"
-            }
-        } else {
-            return "Leap Year";
-        } else {
             return "Not leap Year";
         }
-    
+   
     /**************Don't change the code below****************/    
-    
     }
 
     /**************************************************/
@@ -261,4 +260,74 @@ function isLeap(year) {
 
     /**************************************************/
 
+    var output = [];
     
+    var count = 1;
+
+    function fizzBuzz () {
+
+        if ( count % 3 ===0 && count % 5 ===0 ){
+            output.push("FizzBuzz")
+        }
+        else if (count % 3 === 0 ) {
+            output.push("Fizz")
+        } 
+        else if (count % 5 === 0) {
+            output.push("Buzz")
+        }
+        else {
+            output.push(count);
+        }
+        count++;
+    }
+
+/**************************************************/
+
+var output = [];
+    
+var count = 1;
+
+function fizzBuzz () {
+
+    while (count <= 100) {
+
+    if ( count % 3 ===0 && count % 5 ===0 ){
+        output.push("FizzBuzz")
+    }
+    else if (count % 3 === 0 ) {
+        output.push("Fizz")
+    } 
+    else if (count % 5 === 0) {
+        output.push("Buzz")
+    }
+    else {
+        output.push(count);
+    }
+
+    output.push[count];
+
+    count++;
+    }
+    console.log[output];
+}
+
+/**************************************************/
+
+    function whosPaying(names) {
+    
+        /******Don't change the code above*******/
+            
+            //Write your code here.
+            
+            var numberOfPeople = name.length;
+
+            var randomPersonPosition = math.floor((Math.random() * numberOfPeople));
+
+            var randomPerson = names[randomPersonPosition];
+
+            return random + "is going to buy lunch today";
+        }
+        /******Don't change the code below*******/    
+
+/**************************************************/
+
