@@ -72,7 +72,6 @@ function getMilk(money) {
 
   getMilk(2);
 
-  
 /**************************************************/
 
 function lifeInWeeks(age) {
