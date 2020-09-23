@@ -1,0 +1,12 @@
+
+npm init
+
+https://expressjs.com/en/starter/installing.html
+
+$ npm install express
+
+https://www.npmjs.com/package/nodemon
+
+npm install -g nodemon
+
+nodemon server.js
