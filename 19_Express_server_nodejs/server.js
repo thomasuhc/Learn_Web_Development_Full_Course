@@ -17,9 +17,6 @@ app.get('/hobbies', function (req, res) {
     res.send("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
 });
 
-
-
-
 app.listen(3000, function() {
     console.log("Server started in port 3000")
 });
