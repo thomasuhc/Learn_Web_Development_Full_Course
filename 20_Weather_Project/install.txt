@@ -9,3 +9,9 @@ https://www.npmjs.com/package/nodemon
 npm install -g nodemon
 
 nodemon app.js
+
+https://openweathermap.org/current
+
+api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
+http://api.openweathermap.org/data/2.5/weather?q=toronto&units=metric&appid=d2893f0cdfb00aa69eb343a3c0f11c24
