@@ -1,0 +1,21 @@
+npm init
+
+https://expressjs.com/en/starter/installing.html
+
+npm install express
+npm install body-parser
+npm install request
+npm install -g nodemon
+
+https://www.npmjs.com/package/nodemon
+
+nodemon app.js
+
+Mailchimp ApiKey
+731e0df603c0f494559237896d6b8483-us2
+
+
+List ID
+43c9797e27
+
+https://<dc>.api.mailchimp.com/3.0/lists/{list_id}.
