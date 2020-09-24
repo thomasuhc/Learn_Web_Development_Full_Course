@@ -1,0 +1,18 @@
+npm init
+
+npm install express
+npm install body-parser
+npm install request
+npm install -g nodemon
+
+npm install ejs
+
+nodemon app.js
+
+https://github.com/mde/ejs/wiki/Using-EJS-with-Express
+
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+  res.render('index', {foo: 'FOO'});
+});
