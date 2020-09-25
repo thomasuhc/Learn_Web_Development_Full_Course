@@ -16,3 +16,6 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
   res.render('index', {foo: 'FOO'});
 });
+
+
+app.use(express.static('public'))
