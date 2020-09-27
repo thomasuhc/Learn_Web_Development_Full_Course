@@ -1,0 +1,10 @@
+npm init
+
+https://mongoosejs.com/docs/index.html
+
+npm install mongoose 
+
+https://mongoosejs.com/docs/deprecations.html
+
+mongoose.connect(uri, { useNewUrlParser: true });
+mongoose.createConnection(uri, { useNewUrlParser: true });
