@@ -5,8 +5,15 @@ mongoose.connect("mongodb://localhost:27017/fruitDB", { useNewUrlParser: true, u
 
 const fruitSchema = new mongoose.Schema ({
 
-    name: String,
-    rating: Number,
+    name: {
+        type: String,
+        required: [true, "Check your data"]
+    },
+    score: {
+        type: Number,
+        min: 1,
+        max: 10
+    },
     review: String
 });
 
@@ -14,21 +21,58 @@ const Fruit = mongoose.model("Fruit", fruitSchema);
 
 const fruit = new Fruit ({
 
-    name: "Apple",
-    score: 10,
-    review: "Great fruit"
+    name: "Melon",
+    score: 5,
+    review: "Very sweet"
 
 });
-
-fruit.save();
+ 
+//fruit.save(); */
 
 const personSchema = new mongoose.Schema ({
 
     name: String,
     age: Number,
+    favouriteFruit: fruitSchema
 });
 
 const Person = mongoose.model("Person", personSchema);
+
+const durian = new Fruit ({
+
+    name: "Durian",
+    score: 6,
+    review: "I love Durian fruit !!!"
+
+});
+
+//durian.save();
+
+
+Person.updateOne({name: "Angela"}, {favouriteFruit: durian}, function(err){
+
+    if(err){
+        console.log(err);
+    } else {
+        console.log("add angela fruit");
+    }
+
+});
+
+const cherries = new Fruit({
+    name: "Cherries",
+    age: 25,
+    review: "I hate Cherries hahahahah"
+    
+})
+
+const person = new Person ({
+
+    name: "Aline",
+    age: 20,
+    favouriteFruit: cherries
+
+});
 
 const person = new Person ({
 
@@ -37,7 +81,7 @@ const person = new Person ({
 
 });
 
-person.save();
+//person.save();
 
 const lemon = new Fruit ({
 
@@ -61,7 +105,8 @@ const banana = new Fruit ({
     score: 5,
     review: "I dont like"
 
-});
+}); */
+
 
 Fruit.insertMany([lemon, orange, banana], function(err){
 
@@ -70,20 +115,52 @@ Fruit.insertMany([lemon, orange, banana], function(err){
     } else {
         console.log("All saved in fruitDb");
     }
+}); */
+
+
+Fruit.find(function(err, fruits){
+    if(err){
+        console.log(err);
+    } else {
+
+        mongoose.connection.close();
+
+        console.log(fruits);
+
+        fruits.forEach(function(fruit){
+            console.log(fruit.name);
+        });
+    }
 });
 
 
+Fruit.updateOne({_id: "5f6ffe896f452837cc8adeae"}, {name: "Manga"}, function(err){
+
+    if(err){
+        console.log(err);
+    } else {
+        console.log("Add Manga");
+    }
+
+})
 
 
+Fruit.deleteOne({id: "5f700d9c15e51930181fba5e"}, function(err){
 
-const findDocuments = function(db, callback) {
+    if(err){
+        console.log(err);
+    } else {
+        console.log("Delete m");
+    }
 
-    const collection = db.collection('fruits');
+})
 
-    collection.find({}).toArray(function(err, fruits) {
-        assert.strictEqual(err, null);
-        console.log("Found the following records");
-        console.log(fruits);
-        callback(fruits);
-    });
-}
+
+Fruit.deleteMany({name: "Durian"}, function(err){
+
+    if(err){
+        console.log(err);
+    } else {
+        console.log("Delete Angela all");
+    }
+})
