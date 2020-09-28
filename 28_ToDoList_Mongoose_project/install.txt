@@ -6,3 +6,9 @@ npm install express
 npm install body-parser
 npm install ejs
 npm install -g nodemon
+
+npm install mongoose
+
+{ useNewUrlParser: true }
+
+npm install lodash
