@@ -80,7 +80,6 @@ app.route("/articles/:articleTitle")
 
 .get(function(req, res){
 
-
     Article.findOne({title: req.params.articleTitle}, function(err, foundArticles){
 
         if(foundArticles) {
@@ -89,8 +88,22 @@ app.route("/articles/:articleTitle")
             res.send("No article found");
         }
     });
-});
+})
 
+.put(function(req, res){
+
+    Article.replaceOne(
+        {title: req.params.articleTitle},
+        {title: req.body.title, content: req.body.content},
+        {overwrite: true},
+        function(err) {
+            if(err) {
+                res.send("Update Article");
+            }
+        }
+    );
+
+});
 
 
 
