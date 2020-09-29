@@ -16,15 +16,13 @@ app.use(express.static("public"));
 mongoose.connect("mongodb://localhost:27017/wikiDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
 
-const postSchema = {
-
+const articleSchema = {
     title: String,
-   
     content: String
    
    };
   
-   const Post = mongoose.model("Post", postSchema);
+   const Article = mongoose.model("Article", articleSchema);
 
 
 

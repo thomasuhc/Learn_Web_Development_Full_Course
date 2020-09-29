@@ -1,11 +1,8 @@
 npm init
 
-npm install mongodb
-
 npm install express
 npm install body-parser
 npm install ejs
-npm install lodash
 npm install mongoose
 
 
@@ -13,5 +10,5 @@ npm install -g nodemon
 
 
 
-{ useNewUrlParser: true }
+{useNewUrlParser: true, useUnifiedTopology: true}
 
