@@ -103,8 +103,23 @@ app.route("/articles/:articleTitle")
         }
     );
 
-});
+})
 
+
+.patch(function(req, res){
+
+    Article.update(
+        {title: req.params.articleTitle},
+        {$set: req.body},
+        function(err) {
+            if(err) {
+                res.send("Set some line");
+            } else {
+                res.send(err);
+            }
+        }
+    );
+});
 
 
 
