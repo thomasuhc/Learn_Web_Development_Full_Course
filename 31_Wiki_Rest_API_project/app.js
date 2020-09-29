@@ -97,7 +97,7 @@ app.route("/articles/:articleTitle")
         {title: req.body.title, content: req.body.content},
         {overwrite: true},
         function(err) {
-            if(err) {
+            if(!err) {
                 res.send("Update Article");
             }
         }
@@ -112,8 +112,22 @@ app.route("/articles/:articleTitle")
         {title: req.params.articleTitle},
         {$set: req.body},
         function(err) {
-            if(err) {
+            if(!err) {
                 res.send("Set some line");
+            } else {
+                res.send(err);
+            }
+        }
+    );
+})
+
+.delete(function(req, res){
+
+    Article.deleteOne(
+        {title: req.params.articleTitle},
+        function(err) {
+            if(!err) {
+                res.send("Delete some line");
             } else {
                 res.send(err);
             }
@@ -122,13 +136,7 @@ app.route("/articles/:articleTitle")
 });
 
 
-
-
-
-
-
-
-
+//////////////////////////////////////////////////////////
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
