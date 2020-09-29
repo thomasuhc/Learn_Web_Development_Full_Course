@@ -72,6 +72,34 @@ const articleSchema = {
 });
 
 
+//////////////////////////////////////////////////////////
+
+
+
+app.route("/articles/:articleTitle")
+
+.get(function(req, res){
+
+
+    Article.findOne({title: req.params.articleTitle}, function(err, foundArticles){
+
+        if(foundArticles) {
+            res.send(foundArticles);
+        } else {
+            res.send("No article found");
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
 
 
 app.listen(3000, function() {
