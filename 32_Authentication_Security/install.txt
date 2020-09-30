@@ -4,11 +4,32 @@ npm install express
 npm install body-parser
 npm install ejs
 npm install mongoose
+npm install mongoose-encryption
+npm install dotenv
+npm install md5
+npm install bcrypt
 
+
+npm i passport
+npm install passport-local
+npm i passport-local-mongoose
+npm i express-session
 
 npm install -g nodemon
 
+===================================================================
 
+https://www.npmjs.com/package/dotenv
+
+https://www.npmjs.com/package/bcrypt
+
+https://www.npmjs.com/package/express-session
+
+https://www.npmjs.com/package/passport
+
+http://www.passportjs.org/packages/passport-local/
+
+https://www.npmjs.com/package/passport-local-mongoose
 
 {useNewUrlParser: true, useUnifiedTopology: true}
 
